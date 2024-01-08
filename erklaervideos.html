@@ -54,6 +54,17 @@
             background-color: #f60;
          }
 
+         #benachrichtigung {
+            display: block; /* Stelle sicher, dass das Div standardmäßig sichtbar ist */
+            position: relative;
+    }
+
+        #close-btn {
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
     </style>
 </head>
 <body class="font-sans leading-normal tracking-normal background-blau">
@@ -76,6 +87,11 @@
             </a><br><br>
         </div>
 
+        <div id="benachrichtigung" class="bg-white shadow-md rounded p-4 max-w-sm mx-auto">
+            <span class="font-bold" id="close-btn" onclick="closeNotification()">X</span>
+            <h2 class="text-lg mb-4"><br>Hier findest du einige Videos, die dir beim Sparen helfen können.</h2>
+        </div>
+<br>
         <div class="grid mt-12">
             <div class="aspect-w-16 aspect-h-9 bg-gray-300 rounded">
                 <iframe class="w-full h-full" src="How_to_Taschengeldkonto.mp4" frameborder="0" allowfullscreen="true"></iframe>
@@ -83,5 +99,10 @@
        
         </div>
     </div>
+    <script>
+        function closeNotification() {
+            document.getElementById("benachrichtigung").style.display = "none";
+        }
+    </script>       
 </body>
 </html>
