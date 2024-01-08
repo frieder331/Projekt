@@ -64,6 +64,18 @@
         .borderstrich{
             border-bottom: 2px solid black;
         }
+
+        #benachrichtigung {
+            display: block; /* Stelle sicher, dass das Div standardmäßig sichtbar ist */
+            position: relative;
+    }
+
+        #close-btn {
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
     </style>
 </head>
 <body class="font-sans leading-normal tracking-normal background-blau">
@@ -86,6 +98,12 @@
             </a><br><br>
         </div>
 
+        <div id="benachrichtigung" class="bg-white shadow-md rounded p-4 max-w-sm mx-auto">
+            <span class="font-bold" id="close-btn" onclick="closeNotification()">X</span>
+            <h2 class="text-lg mb-4"><br>Hier findest du eine Übersicht über alles was du schon angespart hast oder was du schon tolles gekauft hast.</h2>
+        
+        </div>
+<br>
         <div class="bg-white rounded-lg shadow-md p-6">
             <div class="borderstrich">
                 <h1 class="text-4xl font-bold text-center">23,00 €</h1>
@@ -112,5 +130,11 @@
 
 
     </div>
+
+    <script>
+        function closeNotification() {
+            document.getElementById("benachrichtigung").style.display = "none";
+        }
+    </script>    
 </body>
 </html>
