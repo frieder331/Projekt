@@ -77,6 +77,17 @@
     border-radius: 0.5rem;
     transition: width 0.3s ease-in-out;
   }
+  #benachrichtigung {
+            display: block; /* Stelle sicher, dass das Div standardmäßig sichtbar ist */
+            position: relative;
+    }
+
+        #close-btn {
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
     </style>
 </head>
 <body class="font-sans leading-normal tracking-normal background-blau">
@@ -99,6 +110,13 @@
             </a><br><br>
         </div>
 
+        <div id="benachrichtigung" class="bg-white shadow-md rounded p-4 max-w-sm mx-auto">
+            <span class="font-bold" id="close-btn" onclick="closeNotification()">X</span>
+            <h2 class="text-lg mb-4"><br>Was wünscht du dir als Nächstes?<br> Wäre es nicht cool, wenn du dir deinen nächsten Wunsch selbst erfüllen kannst?<br>
+                    Spare so lange, bist du dein Ziel erreichst. Du hast es bald geschafft!</h2>
+        
+        </div>
+<br>
         <div class="bg-white shadow-md rounded p-4 max-w-sm mx-auto">
             <h2 class="text-lg font-semibold mb-4">Neues Skateboard</h2>
             <div class="progress-bar mb-4">
@@ -122,5 +140,12 @@
 
 
     </div>
+
+    <script>
+        function closeNotification() {
+            document.getElementById("benachrichtigung").style.display = "none";
+        }
+    </script>
+
 </body>
 </html>
